@@ -44,7 +44,7 @@ else:
     file_path = os.path.join(current_dir, "..", "data", "sierraleone-bumbuna.csv")
 
     df = pd.read_csv(file_path)
-    st.subheader("Uploaded file contents - Default Cleaned Serra-Lione Data")
+    st.subheader("Uploaded file contents - Default Serra-Lione Data")
     st.dataframe(df)
     # Methodology selection
     if selected_methodology == "Time-Series Analysis":
