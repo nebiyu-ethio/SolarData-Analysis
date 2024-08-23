@@ -36,7 +36,14 @@ if uploaded_file is not None:
         st.write("Error: Invalid CSV file. Please upload a valid CSV file.")
 else:
     # Use default CSV file if no file is uploaded
-    df = pd.read_csv("../data/sierraleone-bumbuna.csv")  # Replace "default_data.csv" with the path to your default CSV file
+    import os
+
+    # Get the directory of the current script
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # Construct the path to the data file
+    file_path = os.path.join(current_dir, "..", "data", "sierraleone-bumbuna.csv")
+
+    df = pd.read_csv(file_path)
     st.subheader("Uploaded file contents - Default Cleaned Serra-Lione Data")
     st.dataframe(data)
     # Methodology selection
