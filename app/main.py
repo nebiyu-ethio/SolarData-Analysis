@@ -45,38 +45,38 @@ else:
 
     df = pd.read_csv(file_path)
     st.subheader("Uploaded file contents - Default Cleaned Serra-Lione Data")
-    st.dataframe(data)
+    st.dataframe(df)
     # Methodology selection
     if selected_methodology == "Time-Series Analysis":
         # Seasonal Decomposition
         st.header("Seasonal Decomposition")
         period = st.selectbox("Select Period", [7, 30, 365])
-        decomposition = seasonal_decompose(data["GHI"], model='additive', period=period)
+        decomposition = seasonal_decompose(df["GHI"], model='additive', period=period)
         trend = decomposition.trend
         seasonal = decomposition.seasonal
         residual = decomposition.resid
 
         # Plot the components
         st.subheader("Original")
-        st.line_chart(data["GHI"])
+        st.line_chart(df["GHI"])
 
         st.subheader("Trend")
         st.line_chart(trend)
 
         # Autocorrelation Analysis
         st.subheader("Autocorrelation Analysis")
-        autocorrelation = data["GHI"].autocorr()
+        autocorrelation = df["GHI"].autocorr()
         st.write("Autocorrelation of GHI:", autocorrelation)
 
         # Moving Averages
         st.subheader("Moving Averages")
         window_size = st.slider("Select Window Size", 5, 365, 30)
-        moving_average = data["GHI"].rolling(window=window_size).mean()
+        moving_average = df["GHI"].rolling(window=window_size).mean()
 
         st.subheader("Original vs. Moving Average")
         plt.figure(figsize=(10, 6))
-        plt.plot(data.index, data["GHI"], label='Original')
-        plt.plot(data.index, moving_average, label=f"Moving Average (Window Size {window_size})")
+        plt.plot(df.index, df["GHI"], label='Original')
+        plt.plot(df.index, moving_average, label=f"Moving Average (Window Size {window_size})")
         plt.xlabel("Timestamp")
         plt.ylabel("GHI (W/m²)")
         plt.title("Moving Averages of Global Horizontal Irradiance (GHI)")
@@ -88,11 +88,11 @@ else:
         st.header("Box Plot Analysis")
 
         # Select the variables for box plot analysis
-        variables = st.multiselect("Select variables", data.columns)
+        variables = st.multiselect("Select variables", df.columns)
 
         if len(variables) > 0:
             # Perform box plot analysis
-            boxplot_data = data[variables]
+            boxplot_data = df[variables]
 
             # Display the box plots
             fig, ax = plt.subplots()
@@ -108,8 +108,8 @@ else:
         
        
         # Select variables for correlation analysis
-        numeric_columns = data.select_dtypes(include=["number"]).columns
-        datetime_columns = data.select_dtypes(include=["datetime"]).columns
+        numeric_columns = df.select_dtypes(include=["number"]).columns
+        datetime_columns = df.select_dtypes(include=["datetime"]).columns
         variables = numeric_columns.union(datetime_columns)
 
         # Set default variables
@@ -121,7 +121,7 @@ else:
 
         # Perform correlation analysis if both variables are numeric
         if variable1 and variable2:
-            correlation = data[variable1].corr(data[variable2])
+            correlation = df[variable1].corr(df[variable2])
 
             # Display correlation coefficient
             st.subheader("Correlation Coefficient")
@@ -130,7 +130,7 @@ else:
             # Create a scatter plot
             st.subheader("Scatter Plot")
             plt.figure(figsize=(8, 6))
-            sns.scatterplot(x=data[variable1], y=data[variable2])
+            sns.scatterplot(x=df[variable1], y=df[variable2])
             plt.xlabel(variable1)
             plt.ylabel(variable2)
             plt.title("Scatter Plot")
