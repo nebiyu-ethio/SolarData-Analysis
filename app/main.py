@@ -25,7 +25,7 @@ if uploaded_file is not None:
     # Load the data into a DataFrame
     try:
         # Read the CSV file
-        data = pd.read_csv(uploaded_file)
+        df = pd.read_csv(uploaded_file)
         
         # Display the dataframe
       
