@@ -41,7 +41,7 @@ else:
     # Get the directory of the current script
     current_dir = os.path.dirname(os.path.abspath(__file__))
     # Construct the path to the data file
-    file_path = os.path.join(current_dir, "..", "data", "sierraleone-bumbuna.csv")
+    file_path = os.path.join(current_dir, "..", "data", "cleaned sierraleone-bumbuna.csv")
 
     df = pd.read_csv(file_path)
     st.subheader("Uploaded file contents - Default Serra-Lione Data")
