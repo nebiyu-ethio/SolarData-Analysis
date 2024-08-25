@@ -1,4 +1,4 @@
-# MoonLight Energy Solutions: Strategic Solar Investment Analysis
+# Solar Radiation Analysis
 
 ## Project Overview
 
@@ -34,16 +34,73 @@ During the EDA phase, the following analyses are performed on the solar energy d
 ## How to Use
 
 1. Clone the repository.
-
 ```bash
 git clone https://github.com/username/repository.git
-``` 
-2. Create a virtual environment specific to this project.
-3. Install necessary dependencies from `requirements.txt`.
-4. Review the strategy report for actionable insights.
+```
+2. Navigate to the SolarData-Analysis directory
+```
+cd SolarData-Analysis
+```
+3. Create a virtual environment specific to this project.
+- **Windows:**
+```
+python -m venv .venv
+.venv\Scripts\activate
+```
+- **Linux and macOS:**
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+4. Install necessary dependencies from `requirements.txt`.
+```
+pip install -r requirements.txt
+```
 
-## Dashboard development
+### Usage
 
-Streamlit is a powerful Python library used for building interactive web applications. In this project, Streamlit is used to develop a dashboard for visualizing and exploring the solar energy data. The dashboard is built in such a way that it provides an intuitive interface to interact with the analyzed data and gain insights.
+Once the environment is set up and the packages are installed, run the project locally:
 
-[Click here to view the Streamlit dashboard](https://solar-data-analysis.streamlit.app/)
+1. **Start the Streamlit Dashboard**  
+   Navigate to the `app` directory in the `dashboard-dev`and start the Streamlit dashboard:
+   ```bash
+   cd app
+   streamlit run main.py
+   ```
+
+   This will launch the dashboard, providing an interactive interface for exploring the analyzed data.
+
+### Dashboard Screenshots
+
+**Uploaded File Contents:**
+![Dashboard](https://github.com/nebiyu-ethio/SolarData-Analysis/blob/dashboard-dev/dashboard/Uploaded%20csv%20file.png)
+
+**Correlation Analysis:**
+![Correlation Analysis](https://github.com/nebiyu-ethio/SolarData-Analysis/blob/dashboard-dev/dashboard/Correlation%20Analysis.png)
+
+**Time Series Analysis:**
+![Time Series Analysis](https://github.com/nebiyu-ethio/SolarData-Analysis/blob/dashboard-dev/dashboard/Time-Series%20Analysis.png)
+
+**Box Plot Analysis:**
+![Box Plot Analysis](https://github.com/nebiyu-ethio/SolarData-Analysis/blob/dashboard-dev/dashboard/Box%20Plot%20Analysis.png)
+
+### Deployed Dashboard URL
+
+The deployed version of the Streamlit dashboard can be accessed at: [Solar Radation Data Dashboard](https://solar-data-analysis.streamlit.app/).
+
+### Project Report
+
+For a detailed analysis, insights, and recommendations, refer to the full project report: [Download PDF Report](https://drive.google.com/file/d/1SOTqAdbLSAi9gQ5effXxzy2AolDf7QgE/view?usp=drive_link).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+### Contact
+
+- **Email**: [Send Message](nebiyuethio@gmail.com)
+- **LinkedIn**: [Nebiyu G Gelaw](https://www.linkedin.com/in/neba-gech)
+
+### Author
+
+👤 **Nebiyu Getachew**
