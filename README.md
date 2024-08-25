@@ -12,7 +12,7 @@ The goal of this analysis is to perform a thorough exploratory data analysis (ED
 
 During the EDA phase, the following analyses are performed on the solar energy dataset:
 
-[Click Here to view the Exploratory-Data-Analysis.ipynb file](https://github.com/nebiyu-ethio/SolarData-Analysis/blob/task-1/notebooks/EDA.ipynb)
+[Click Here to view the EDA file](https://github.com/nebiyu-ethio/SolarData-Analysis/blob/task-1/notebooks/EDA.ipynb)
 
 - **Summary Statistics**: Calculate descriptive statistics such as mean, median, and standard deviation for each numeric column in order to understand the data distribution.
 - **Data Quality Check**: Identify missing values, outliers, or incorrect entries in columns such as GHI, DNI, DHI, and others.
