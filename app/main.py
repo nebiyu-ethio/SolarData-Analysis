@@ -26,18 +26,12 @@ if uploaded_file is not None:
     try:
         # Read the CSV file
         df = pd.read_csv(uploaded_file)
-        
-        # Display the dataframe
-      
-        
-        # Perform further data processing or analysis if needed
-        
     except pd.errors.ParserError:
         st.write("Error: Invalid CSV file. Please upload a valid CSV file.")
 else:
     # Use default CSV file if no file is uploaded
-    df = pd.read_csv("cleaned_sierraleon_dataset.csv")  # Replace "default_data.csv" with the path to your default CSV file
-    st.subheader("Uploaded file contents - Default Cleaned Serra-Lione Data")
+    df = pd.read_csv("cleaned sierraleone-bumbuna.csv")
+    st.subheader("Uploaded file contents - Default Cleaned Sierraleone-Bumbuna Data")
     st.dataframe(df)
 
     # Methodology selection
