@@ -98,7 +98,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Contact
 
-- **Email**: [Send Message](nebiyuethio@gmail.com)
+- **Email**: [Send Message](mailto:nebiyuethio@gmail.com)
 - **LinkedIn**: [Nebiyu G Gelaw](https://www.linkedin.com/in/neba-gech)
 
 ### Author
