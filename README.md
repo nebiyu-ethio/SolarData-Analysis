@@ -34,6 +34,10 @@ During the EDA phase, the following analyses are performed on the solar energy d
 ## How to Use
 
 1. Clone the repository.
+
+```bash
+git clone https://github.com/username/repository.git
+``` 
 2. Create a virtual environment specific to this project.
 3. Install necessary dependencies from `requirements.txt`.
 4. Review the strategy report for actionable insights.
