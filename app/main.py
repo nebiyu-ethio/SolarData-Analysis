@@ -31,7 +31,7 @@ if uploaded_file is not None:
         st.write("Error: Invalid CSV file. Please upload a valid CSV file.")
 else:
     # Use default CSV file if no file is uploaded
-    csv_file_path = os.path.join(os.path.dirname(__file__), 'app', 'cleaned sierraleone-bumbuna.csv')
+    csv_file_path = os.path.join(os.path.dirname(__file__), 'cleaned sierraleone-bumbuna.csv')
     df = pd.read_csv(csv_file_path)
     st.subheader("Uploaded file contents - Default Cleaned Sierraleone-Bumbuna Data")
     # st.dataframe(df)
